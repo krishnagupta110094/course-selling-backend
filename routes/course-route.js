@@ -1,10 +1,7 @@
 const express = require("express");
+const { getAllCourses } = require("../controllers/course");
 const router = express.Router();
 
-router.post("/purchase", () => {
-  console.log("purchase route");
-});
-router.get("/preview", () => {
-  console.log("preview route");
-});
+
+router.get("/preview", getAllCourses);
 module.exports = router;
